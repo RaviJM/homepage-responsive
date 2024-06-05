@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --side-padding: 2rem;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./Fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Playfair_Display";
+  src: url("./Fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
+header,
+footer {
+  background-color: #0891b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: "Roboto";
+}
+
+h2,
+p {
+  font-family: "Playfair_Display";
+}
+
+.my-photo-container {
+  background-image: url("./Images/pexels-olly-837306.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 40vw;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.about-me-container {
+  background-color: white;
+  box-shadow: black 1px 1px 5px;
+  width: 40vw;
+  padding: 2rem;
+}
+
+.socials-icons-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 13px;
+}
+
+svg {
+  height: 20px;
+  width: 20px;
+}
+
+header,
+footer,
+.projects-region {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  padding-right: var(--side-padding);
+  padding-left: var(--side-padding);
+}
+
+footer {
+  color: white;
+}
+
+.socials-icons-container.contact-me-socials-icons {
+  justify-content: start;
+}
+
+.contact-photo {
+  width: 27vw;
+  height: auto;
+  margin-left: 3rem;
+}
+
+.projects-region {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.projects-container {
+  --gap: 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: var(--gap);
+  column-gap: var(--gap);
+}
+
+.project {
+  height: 18rem;
+  box-shadow: black 1px 1px 8px;
+}
+
+.project-title-container {
+  height: 58%;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.project-name-and-links-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-description-container {
+  padding: 1rem;
+}
+
+#project-1 {
+  background-color: #9e1c1c;
+}
+
+#project-2 {
+  background-color: #7c75ca;
+}
+
+#project-3 {
+  background-color: #5e8f4d;
+}
+
+#project-4 {
+  background-color: #c363b4;
+}
+
+#project-5 {
+  background-color: #d88f39;
+}
+
+#project-6 {
+  background-color: #4ba2d2;
+}
+
+@media screen and (max-width: 480px) {
+  .projects-container {
+    --gap: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: var(--gap);
+    column-gap: var(--gap);
+  }
+
+  header,
+  footer {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .projects-container {
+    --gap: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: var(--gap);
+    column-gap: var(--gap);
+  }
+
+  header,
+  footer {
+    flex-direction: column;
+  }
+}
